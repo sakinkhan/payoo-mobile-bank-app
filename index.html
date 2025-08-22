@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- DaisyUI & Tailwind CDN -->
+    <link rel="stylesheet" href="tailwind.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Outfit google font CDN -->
+    <link rel="stylesheet" href="google-font.css">
+</head>
+<body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center flex-col">
+    <div class="h-[130px] w-[316px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center">
+        <img src="./assets/Group.png" alt="logo">
+    </div>
+    <form action="" class="bg-white rounded-[24px] w-[402px] h-[317px] p-8">
+        <div class="mt-3">
+            <label for="" class="outfit-font font-medium text-[16px]">Mobile Number</label> <br>
+            <input id="mobile-number" type="text" placeholder="Enter your number" class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2" />
+        </div>
+        <div class="mt-4">
+            <label for="" class="outfit-font font-medium text-[16px]">4 Digit Pin</label> <br>
+            <input id="pin-number" type="text" placeholder="Enter 4 Digit Pin" class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2" />
+        </div>
+        <button id="loginButton" class="btn bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer" type="button">Login</button>
+    </form>
+
+    <!-- js Scripts -->
+    <script src="./script.js"></script>
+</body>
+</html>

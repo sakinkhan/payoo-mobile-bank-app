@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- DaisyUI & Tailwind CDN -->
+    <link rel="stylesheet" href="tailwind.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Outfit google font CDN -->
+    <link rel="stylesheet" href="google-font.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F4F5F7]">
+    <!-- Top Section -->
+    <section
+      class="bg-white border-b-1 border-b-[#080808]/10 min-h-[84px] flex justify-between items-center gap-[127px] px-6 max-w-lg mx-auto"
+    >
+      <div class="flex items-center justify-between gap-2">
+        <img src="./assets/Group.png" alt="logo" class="h-[48px]" />
+        <div>
+          <p class="outfit-font font-extrabold text-[18px] text-[#080808]/90">
+            $<span>45000</span>
+          </p>
+          <p class="outfit-font text-[14px] text-[#080808]/50">
+            Available Balance
+          </p>
+        </div>
+      </div>
+      <div class="">
+        <div class="">
+          <button
+            class="btn btn-outline outfit-font text-[14px] text-[#080808]/50"
+          >
+            <i
+              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"
+            ></i>
+            Log Out
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Middle Section -->
+    <section class="max-w-lg mx-auto px-6 bg-white rounded-b-[24px]">
+      <div>
+        <h1 class="outfit-font font-bold text-[24px] text-[#080808] pt-8">
+          🔥 Welcome to Payooo!
+        </h1>
+        <p class="outfit-font text-[16px] text-[#080808]/50 mt-3">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low!
+        </p>
+      </div>
+      <div class="min-h-[200px] grid grid-cols-3 gap-4 max-w-lg mx-auto py-6">
+        <div
+          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+        >
+          <img src="./assets/wallet1.png" alt="wallet" class="mx-auto pb-2" />
+          <p class="outfit-font text-[14px] text-[#080808]/70">Add Money</p>
+        </div>
+        <div
+          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+        >
+          <img src="./assets/send1.png" alt="cashout" class="mx-auto pb-2" />
+          <p class="outfit-font text-[14px] text-[#080808]/70">Cashout</p>
+        </div>
+        <div
+          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+        >
+          <img src="./assets/money1.png" alt="transfer" class="mx-auto pb-2" />
+          <p class="outfit-font text-[14px] text-[#080808]/70">
+            Transfer Money
+          </p>
+        </div>
+        <div
+          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+        >
+          <img src="./assets/bonus1.png" alt="bonus" class="mx-auto pb-2" />
+          <p class="outfit-font text-[14px] text-[#080808]/70">Get Bonus</p>
+        </div>
+        <div
+          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+        >
+          <img src="./assets/purse1.png" alt="pay bill" class="mx-auto pb-2" />
+          <p class="outfit-font text-[14px] text-[#080808]/70">Pay Bill</p>
+        </div>
+        <div
+          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+        >
+          <img
+            src="./assets/transaction1.png"
+            alt="transaction"
+            class="mx-auto pb-2"
+          />
+          <p class="outfit-font text-[14px] text-[#080808]/70">Transactions</p>
+        </div>
+      </div>
+    </section>
+    <!-- Bottom Section -->
+    <section class="max-w-lg mx-auto">
+      <p
+        class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+      >
+        Add Money
+      </p>
+      <div class="bg-white p-6 rounded-[24px] mx-6">
+        <div>
+          <p
+            class="outfit-font font-medium text-[16px] text-[#080808]/70 mb-[12px]"
+          >
+            Select A Bank
+          </p>
+          <select
+            class="select rounded-[32px] bg-[#F4F5F7] text-[#080808] w-full"
+          >
+            <option disabled selected class="text-[#080808]">
+              Select Bank
+            </option>
+            <option>Crimson</option>
+            <option>Amber</option>
+            <option>Velvet</option>
+          </select>
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Bank Account Number
+          </p>
+          <input
+            id="pin-number"
+            type="text"
+            placeholder="Enter 11 digit account number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Amount to Add
+          </p>
+          <input
+            id="pin-number"
+            type="text"
+            placeholder="Add Amount to withdraw"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Pin Number
+          </p>
+          <input
+            id="pin-number"
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <button
+          id="addMoneyBtn"
+          class="btn bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer"
+          type="button"
+        >
+          Add Money
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
