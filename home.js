@@ -1,3 +1,13 @@
+// Protect the page
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "index.html"; // kick back if not logged in
+    }
+// Logout
+document.getElementById("logoutBtn").addEventListener("click", function() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "./index.html";
+});
+
 // Sample database values
 const validPin = 2044;
 const transactionData = [];

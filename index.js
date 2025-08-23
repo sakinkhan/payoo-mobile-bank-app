@@ -8,9 +8,10 @@ document
     const mobileNumberValue = parseInt(document.getElementById("mobile-number").value);
     const pinNumberValue = parseInt(document.getElementById("pin-number").value);
     if (mobileNumberValue === mobileNumber && pinNumberValue === pinNumber) {
-        window.location.href='./home.html';
+      localStorage.setItem("isLoggedIn", "true");  
+      window.location.href='./home.html';
     }
     else {
-        alert("Invalid credentials");
+        alert("Invalid login credentials");
     }
   });
