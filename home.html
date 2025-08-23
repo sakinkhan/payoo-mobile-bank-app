@@ -70,7 +70,7 @@
         <!-- Add Money Card -->
         <div
           id="add-money-card"
-          class="group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
+          class="form-btn group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/wallet1.png" alt="wallet" class="mx-auto pb-2" />
           <p
@@ -82,7 +82,7 @@
         <!-- Cashout card -->
         <div
           id="cashout-card"
-          class="group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
+          class="form-btn group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/send1.png" alt="cashout" class="mx-auto pb-2" />
           <p
@@ -94,7 +94,7 @@
         <!-- Transfer Money card -->
         <div
           id="transfer-money-card"
-          class="group text-center py-[20px] px-[10px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
+          class="form-btn group text-center py-[20px] px-[10px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/money1.png" alt="transfer" class="mx-auto pb-2" />
           <p
@@ -106,7 +106,7 @@
         <!-- Get Bonus card -->
         <div
           id="get-bonus-card"
-          class="group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
+          class="form-btn group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/bonus1.png" alt="bonus" class="mx-auto pb-2" />
           <p
@@ -118,7 +118,7 @@
         <!-- Pay bill card -->
         <div
           id="pay-bill-card"
-          class="group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
+          class="form-btn group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/purse1.png" alt="pay bill" class="mx-auto pb-2" />
           <p
@@ -130,7 +130,7 @@
         <!-- Transactions card -->
         <div
           id="transaction-card"
-          class="group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
+          class="form-btn group text-center py-[20px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img
             src="./assets/transaction1.png"
@@ -149,7 +149,7 @@
     <!-- Latest Payment (Default Section) -->
     <section
       id="latest-payment-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
     >
       <div class="flex justify-between items-center">
         <p
@@ -271,7 +271,7 @@
     <!-- Add Money Section -->
     <section
       id="add-money-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
       style="display: none"
     >
       <p
@@ -289,6 +289,7 @@
           <select
             id="bank"
             class="select rounded-[32px] bg-[#F4F5F7] text-[#080808] w-full"
+            required
           >
             <option disabled selected class="text-[#080808]">
               Select Bank
@@ -326,7 +327,7 @@
           </p>
           <input
             id="add-pin"
-            type="text"
+            type="password"
             placeholder="Enter 4 digit pin number"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
           />
@@ -344,7 +345,7 @@
     <!-- Cashout Section -->
     <section
       id="cashout-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
       style="display: none"
     >
       <p
@@ -381,7 +382,7 @@
           </p>
           <input
             id="cashout-pin"
-            type="text"
+            type="password"
             placeholder="Enter 4 digit pin number"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
           />
@@ -399,7 +400,7 @@
     <!-- Transfer Money Section -->
     <section
       id="transfer-money-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
       style="display: none"
     >
       <p
@@ -436,7 +437,7 @@
           </p>
           <input
             id="transfer-pin"
-            type="text"
+            type="password"
             placeholder="Enter 4 digit pin number"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
           />
@@ -454,7 +455,7 @@
     <!-- Get Bonus Section -->
     <section
       id="get-bonus-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
       style="display: none"
     >
       <p
@@ -487,7 +488,7 @@
     <!-- Pay Bill Section -->
     <section
       id="pay-bill-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
       style="display: none"
     >
       <p
@@ -505,6 +506,7 @@
           <select
             id="bank"
             class="select rounded-[32px] bg-[#F4F5F7] text-[#080808] w-full"
+            required
           >
             <option disabled selected class="text-[#080808]">
               Select Bank
@@ -542,7 +544,7 @@
           </p>
           <input
             id="pay-bill-pin"
-            type="text"
+            type="password"
             placeholder="Enter 4 digit pin number"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
           />
@@ -560,7 +562,7 @@
     <!-- Transactions Section -->
     <section
       id="transaction-section"
-      class="max-w-lg mx-auto"
+      class="form max-w-lg mx-auto"
       style="display: none"
     >
       <div class="flex justify-between items-center">

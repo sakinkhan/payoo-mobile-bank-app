@@ -1,125 +1,163 @@
 // Add Money Feature
-document.getElementById('addMoneyBtn').addEventListener('click', function(event){
+document
+  .getElementById("addMoneyBtn")
+  .addEventListener("click", function (event) {
     event.preventDefault();
     // Sample database values
     const validPin = 2044;
 
+    // Function to get input values
+    function getInputValueNumber(id) {
+      const inputFieldValueNumber = parseInt(document.getElementById(id).value);
+      return inputFieldValueNumber;
+    }
+    function getInputValue(id) {
+      const inputFieldValue = document.getElementById(id).value;
+      return inputFieldValue;
+    }
+    function getInnerText(id) {
+      const innerText = document.getElementById(id).innerText;
+      return innerText;
+    }
+    // Function to get innerText
+    function setInnerText(id, value) {
+      const element = document.getElementById(id);
+      element.innerText = value;
+    }
+
     // Form Values
-    const bank = document.getElementById('bank').value;
-    const accountNumber = document.getElementById('account-number').value;
-    const accountNumberInt = parseInt(accountNumber);
-    const addAmount = parseInt(document.getElementById('add-amount').value);
-    const addPin = document.getElementById('add-pin').value;
-    const addPinInt = parseInt(addPin);
-    const bankBalance = parseInt(document.getElementById('bank-balance').innerText);
+    const bank = getInputValue("bank");
+    const accountNumber = getInputValue("account-number");
+    const accountNumberInt = getInputValueNumber("account-number");
+    const addAmount = getInputValueNumber("add-amount");
+    const addPin = getInputValue("add-pin");
+    const addPinInt = getInputValueNumber("add-pin");
+    const bankBalance = parseInt(getInnerText("bank-balance"));
 
     // Validations
-    if(accountNumber.length < 11 || accountNumber.length > 11){
-        alert('Please provide a valid Account Number.');
-        return;
+    if (accountNumber.length < 11 || accountNumber.length > 11) {
+      alert("Please provide a valid Account Number.");
+      return;
     }
-    if(addPin.length < 4 || addPin.length > 4){
-        alert('Please provide a valid PIN.');
-        return;
+    if (addPin.length < 4 || addPin.length > 4) {
+      alert("Please provide a valid PIN.");
+      return;
     }
-    if(addPinInt !== validPin){
-        alert('Please provide a valid PIN.');
-        return;
+    if (addPinInt !== validPin) {
+      alert("Please provide a valid PIN.");
+      return;
     }
-    if(isNaN(addAmount)){
-        alert('Please provide a valid Amount to Add.');
-        return;
+    if (isNaN(addAmount)) {
+      alert("Please provide a valid Amount to Add.");
+      return;
     }
-
 
     const totalBankBalance = bankBalance + addAmount;
-    document.getElementById('bank-balance').innerText = totalBankBalance;
+    setInnerText("bank-balance", totalBankBalance);
 
-    
-
-})
+    // clean the form
+    // document.getElementById('bank').value = '';
+    // document.getElementById('account-number').value = '';
+    // document.getElementById("add-amount").value = "";
+    // document.getElementById('add-pin').value = '';
+  });
 
 // Cashout feature
-document.getElementById('withdrawMoneyBtn').addEventListener('click', function(event){
+document
+  .getElementById("withdrawMoneyBtn")
+  .addEventListener("click", function (event) {
     event.preventDefault();
     const validPin = 2044;
 
-    // Form Values
-    const agentNumber = document.getElementById('cashout-agent-number').value;
-    const agentNumberInt = parseInt(agentNumber);
-    const cashoutAmount = parseInt(document.getElementById('cashout-amount').value);
-    const cashoutPin = document.getElementById('cashout-pin').value;
-    const cashoutPinInt = parseInt(cashoutPin);
-    const bankBalance = parseInt(document.getElementById('bank-balance').innerText);
+    // Function to get input values
+    function getInputValueNumber(id) {
+      const inputFieldValueNumber = parseInt(document.getElementById(id).value);
+      return inputFieldValueNumber;
+    }
+    function getInputValue(id) {
+      const inputFieldValue = document.getElementById(id).value;
+      return inputFieldValue;
+    }
+    function getInnerText(id) {
+      const innerText = document.getElementById(id).innerText;
+      return innerText;
+    }
+    // Function to get innerText
+    function setInnerText(id, value) {
+      const element = document.getElementById(id);
+      element.innerText = value;
+    }
 
-    
+    // Form Values
+    const agentNumber = getInputValue("cashout-agent-number");
+    const agentNumberInt = getInputValueNumber("cashout-agent-number");
+    const cashoutAmount = getInputValueNumber("cashout-amount");
+    const cashoutPin = getInputValue("cashout-pin");
+    const cashoutPinInt = getInputValueNumber("cashout-pin");
+    const bankBalance = parseInt(getInnerText("bank-balance"));
+
     const totalBankBalance = bankBalance - cashoutAmount;
-    document.getElementById('bank-balance').innerText = totalBankBalance;
-    console.log(agentNumberInt, cashoutAmount, cashoutPinInt, bankBalance, totalBankBalance);
-});
+    setInnerText("bank-balance", totalBankBalance);
+  });
 
 // Toggling Feature
 
-document.getElementById('logo').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'block';
-    document.getElementById('cashout-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'none';
+// function to toggle
+function handleToggle(id, className) {
+  const forms = document.getElementsByClassName(className);
+  for (const form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+// function to toggle buttons
+function handleButtonEffect(id, className){
+    const formButtons = document.getElementsByClassName(className);
+    for (const formButton of formButtons) {
+        formButton.classList.remove("border-[#0874F2]", "bg-[#0874F2]/5");
+        formButton.classList.add("border-[#080808]/10");
+    }
+    document.getElementById(id).classList.remove("border-[#080808]/10");
+    document.getElementById(id).classList.add("border-1", "border-[#0874F2]", "bg-[#0874F2]/5");
+}
+
+// display "latest-payment-section"
+document.getElementById("logo").addEventListener("click", function () {
+  handleToggle("latest-payment-section", "form");
 });
-document.getElementById('add-money-card').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'none';
-    document.getElementById('cashout-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'block';
+
+// display "add-money-section"
+document.getElementById("add-money-card").addEventListener("click", function () {
+    handleToggle("add-money-section", "form");
+    handleButtonEffect("add-money-card", 'form-btn');
 });
-document.getElementById('cashout-card').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'none';
-    document.getElementById('cashout-section').style.display = 'block';
+
+// display "cashout-section"
+document.getElementById("cashout-card").addEventListener("click", function () {
+  handleToggle("cashout-section", "form");
+  handleButtonEffect("cashout-card", 'form-btn');
 });
-document.getElementById('transfer-money-card').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'none';
-    document.getElementById('cashout-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'block';
+
+// display "transfer-money-section"
+document.getElementById("transfer-money-card").addEventListener("click", function () {
+    handleToggle("transfer-money-section", "form");
+    handleButtonEffect("transfer-money-card", 'form-btn');
 });
-document.getElementById('get-bonus-card').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'none';
-    document.getElementById('cashout-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'block';
+
+// display "get-bonus-section"
+document.getElementById("get-bonus-card").addEventListener("click", function () {
+    handleToggle("get-bonus-section", "form");
+    handleButtonEffect("get-bonus-card", 'form-btn');
 });
-document.getElementById('pay-bill-card').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'none';
-    document.getElementById('cashout-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'block';
+
+// display "pay-bill-section"
+document.getElementById("pay-bill-card").addEventListener("click", function () {
+  handleToggle("pay-bill-section", "form");
+  handleButtonEffect("pay-bill-card", 'form-btn');
 });
-document.getElementById('transaction-card').addEventListener('click', function(){
-    document.getElementById('latest-payment-section').style.display = 'none';
-    document.getElementById('cashout-section').style.display = 'none';
-    document.getElementById('add-money-section').style.display = 'none';
-    document.getElementById('transfer-money-section').style.display = 'none';
-    document.getElementById('get-bonus-section').style.display = 'none';
-    document.getElementById('pay-bill-section').style.display = 'none';
-    document.getElementById('transaction-section').style.display = 'block';
+
+// display "transaction-section"
+document.getElementById("transaction-card").addEventListener("click", function () {
+    handleToggle("transaction-section", "form");
+    handleButtonEffect("transaction-card", 'form-btn');
 });
