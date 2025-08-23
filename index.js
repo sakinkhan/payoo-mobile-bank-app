@@ -1,7 +1,7 @@
 // Login button functionality
 document
   .getElementById("loginButton")
-  .addEventListener("click", function (event) {
+  .addEventListener("click", function(event) {
     event.preventDefault();
     const mobileNumber = 0470365288;
     const pinNumber = 2044;
