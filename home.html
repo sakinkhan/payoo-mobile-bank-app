@@ -23,13 +23,13 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F4F5F7] h-[1200px]">
+  <body class="bg-[#F4F5F7] h-[1200px]" id="">
     <!-- Top Section -->
     <section
       class="bg-white border-b-1 border-b-[#080808]/10 min-h-[84px] flex justify-between items-center px-6 max-w-lg mx-auto"
     >
       <div class="flex items-center justify-between gap-2">
-        <img src="./assets/Group.png" alt="logo" class="h-[48px]" />
+        <img src="./assets/Group.png" alt="logo" class="h-[48px] cursor-pointer" id="logo" />
         <div>
           <p class="outfit-font font-extrabold text-[18px] text-[#080808]/90">
             $<span id="bank-balance">45000</span>
@@ -145,8 +145,135 @@
         </div>
       </div>
     </section>
+
+    <!-- Latest Payment (Default Section) -->
+    <section
+      id="latest-payment-section"
+      class="max-w-lg mx-auto"
+    >
+      <div class="flex justify-between items-center">
+        <p
+          class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-8"
+        >
+          Latest Payment
+        </p>
+        <button
+          class="mt-8 mb-4 mx-8 outfit-font text-[14px] text-[#080808]/50 cursor-pointer"
+        >
+          View All
+        </button>
+      </div>
+      <!-- Latest Payment records -->
+      <div class="cards flex flex-col gap-4 mb-8">
+        <div
+          class="card1 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Electricity Bill
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
+        </div>
+        <div
+          class="card2 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Bank Deposit
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
+        </div>
+        <div
+          class="card3 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Mobile Recharge
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
+        </div>
+        <div
+          class="card4 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Gas Bill
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+
     <!-- Add Money Section -->
-    <section id="add-money-section" class="max-w-lg mx-auto">
+    <section
+      id="add-money-section"
+      class="max-w-lg mx-auto"
+      style="display: none"
+    >
       <p
         class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
       >
@@ -213,6 +340,7 @@
         </button>
       </div>
     </section>
+
     <!-- Cashout Section -->
     <section
       id="cashout-section"
@@ -267,6 +395,7 @@
         </button>
       </div>
     </section>
+
     <!-- Transfer Money Section -->
     <section
       id="transfer-money-section"
@@ -321,6 +450,7 @@
         </button>
       </div>
     </section>
+
     <!-- Get Bonus Section -->
     <section
       id="get-bonus-section"
@@ -353,6 +483,7 @@
         </button>
       </div>
     </section>
+
     <!-- Pay Bill Section -->
     <section
       id="pay-bill-section"
@@ -425,6 +556,7 @@
         </button>
       </div>
     </section>
+
     <!-- Transactions Section -->
     <section
       id="transaction-section"
@@ -433,12 +565,12 @@
     >
       <div class="flex justify-between items-center">
         <p
-          class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+          class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-8"
         >
           Transaction History
         </p>
         <button
-          class="mt-8 mb-4 mx-6 outfit-font text-[14px] text-[#080808]/50 cursor-pointer"
+          class="mt-8 mb-4 mx-8 outfit-font text-[14px] text-[#080808]/50 cursor-pointer"
         >
           View All
         </button>
@@ -468,7 +600,7 @@
               </p>
             </div>
           </div>
-          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
         </div>
         <div
           class="card2 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
@@ -493,7 +625,7 @@
               </p>
             </div>
           </div>
-          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
         </div>
         <div
           class="card3 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
@@ -518,7 +650,7 @@
               </p>
             </div>
           </div>
-          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
         </div>
         <div
           class="card4 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
@@ -543,7 +675,7 @@
               </p>
             </div>
           </div>
-          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70 cursor-pointer"></i>
         </div>
       </div>
     </section>

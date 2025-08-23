@@ -35,6 +35,8 @@ document.getElementById('addMoneyBtn').addEventListener('click', function(event)
     const totalBankBalance = bankBalance + addAmount;
     document.getElementById('bank-balance').innerText = totalBankBalance;
 
+    
+
 })
 
 // Cashout feature
@@ -58,7 +60,17 @@ document.getElementById('withdrawMoneyBtn').addEventListener('click', function(e
 
 // Toggling Feature
 
+document.getElementById('logo').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'block';
+    document.getElementById('cashout-section').style.display = 'none';
+    document.getElementById('transfer-money-section').style.display = 'none';
+    document.getElementById('get-bonus-section').style.display = 'none';
+    document.getElementById('pay-bill-section').style.display = 'none';
+    document.getElementById('transaction-section').style.display = 'none';
+    document.getElementById('add-money-section').style.display = 'none';
+});
 document.getElementById('add-money-card').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'none';
     document.getElementById('cashout-section').style.display = 'none';
     document.getElementById('transfer-money-section').style.display = 'none';
     document.getElementById('get-bonus-section').style.display = 'none';
@@ -67,6 +79,7 @@ document.getElementById('add-money-card').addEventListener('click', function(){
     document.getElementById('add-money-section').style.display = 'block';
 });
 document.getElementById('cashout-card').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'none';
     document.getElementById('add-money-section').style.display = 'none';
     document.getElementById('transfer-money-section').style.display = 'none';
     document.getElementById('get-bonus-section').style.display = 'none';
@@ -75,6 +88,7 @@ document.getElementById('cashout-card').addEventListener('click', function(){
     document.getElementById('cashout-section').style.display = 'block';
 });
 document.getElementById('transfer-money-card').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'none';
     document.getElementById('cashout-section').style.display = 'none';
     document.getElementById('add-money-section').style.display = 'none';
     document.getElementById('get-bonus-section').style.display = 'none';
@@ -83,6 +97,7 @@ document.getElementById('transfer-money-card').addEventListener('click', functio
     document.getElementById('transfer-money-section').style.display = 'block';
 });
 document.getElementById('get-bonus-card').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'none';
     document.getElementById('cashout-section').style.display = 'none';
     document.getElementById('add-money-section').style.display = 'none';
     document.getElementById('transfer-money-section').style.display = 'none';
@@ -91,6 +106,7 @@ document.getElementById('get-bonus-card').addEventListener('click', function(){
     document.getElementById('get-bonus-section').style.display = 'block';
 });
 document.getElementById('pay-bill-card').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'none';
     document.getElementById('cashout-section').style.display = 'none';
     document.getElementById('add-money-section').style.display = 'none';
     document.getElementById('transfer-money-section').style.display = 'none';
@@ -99,6 +115,7 @@ document.getElementById('pay-bill-card').addEventListener('click', function(){
     document.getElementById('pay-bill-section').style.display = 'block';
 });
 document.getElementById('transaction-card').addEventListener('click', function(){
+    document.getElementById('latest-payment-section').style.display = 'none';
     document.getElementById('cashout-section').style.display = 'none';
     document.getElementById('add-money-section').style.display = 'none';
     document.getElementById('transfer-money-section').style.display = 'none';
