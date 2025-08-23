@@ -23,7 +23,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F4F5F7]">
+  <body class="bg-[#F4F5F7] h-[1200px]">
     <!-- Top Section -->
     <section
       class="bg-white border-b-1 border-b-[#080808]/10 min-h-[84px] flex justify-between items-center gap-[127px] px-6 max-w-lg mx-auto"
@@ -32,7 +32,7 @@
         <img src="./assets/Group.png" alt="logo" class="h-[48px]" />
         <div>
           <p class="outfit-font font-extrabold text-[18px] text-[#080808]/90">
-            $<span>45000</span>
+            $<span id="bank-balance">45000</span>
           </p>
           <p class="outfit-font text-[14px] text-[#080808]/50">
             Available Balance
@@ -41,14 +41,16 @@
       </div>
       <div class="">
         <div class="">
-          <button
-            class="btn btn-outline outfit-font text-[14px] text-[#080808]/50"
-          >
-            <i
-              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"
-            ></i>
-            Log Out
-          </button>
+          <a href="./index.html">
+            <button
+              class="btn btn-outline outfit-font text-[14px] text-[#080808]/50"
+            >
+              <i
+                class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"
+              ></i>
+              Log Out
+            </button>
+          </a>
         </div>
       </div>
     </section>
@@ -56,60 +58,95 @@
     <section class="max-w-lg mx-auto px-6 bg-white rounded-b-[24px]">
       <div>
         <h1 class="outfit-font font-bold text-[24px] text-[#080808] pt-8">
-          🔥 Welcome to Payooo!
+          🔥Welcome to Payooo!
         </h1>
         <p class="outfit-font text-[16px] text-[#080808]/50 mt-3">
           Enjoy easy and convenient financial services with us. Cashout charge
           is low!
         </p>
       </div>
+      <!-- cards -->
       <div class="min-h-[200px] grid grid-cols-3 gap-4 max-w-lg mx-auto py-6">
+        <!-- Add Money Card -->
         <div
-          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+          id="add-money-card"
+          class="group text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/wallet1.png" alt="wallet" class="mx-auto pb-2" />
-          <p class="outfit-font text-[14px] text-[#080808]/70">Add Money</p>
+          <p
+            class="outfit-font text-[14px] text-[#080808]/70 group-hover:text-[#0874F2]"
+          >
+            Add Money
+          </p>
         </div>
+        <!-- Cashout card -->
         <div
-          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+          id="cashout-card"
+          class="group text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/send1.png" alt="cashout" class="mx-auto pb-2" />
-          <p class="outfit-font text-[14px] text-[#080808]/70">Cashout</p>
+          <p
+            class="outfit-font text-[14px] text-[#080808]/70 group-hover:text-[#0874F2]"
+          >
+            Cashout
+          </p>
         </div>
+        <!-- Transfer Money card -->
         <div
-          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+          id="transfer-money-card"
+          class="group text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/money1.png" alt="transfer" class="mx-auto pb-2" />
-          <p class="outfit-font text-[14px] text-[#080808]/70">
+          <p
+            class="outfit-font text-[14px] text-[#080808]/70 group-hover:text-[#0874F2]"
+          >
             Transfer Money
           </p>
         </div>
+        <!-- Get Bonus card -->
         <div
-          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+          id="get-bonus-card"
+          class="group text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/bonus1.png" alt="bonus" class="mx-auto pb-2" />
-          <p class="outfit-font text-[14px] text-[#080808]/70">Get Bonus</p>
+          <p
+            class="outfit-font text-[14px] text-[#080808]/70 group-hover:text-[#0874F2]"
+          >
+            Get Bonus
+          </p>
         </div>
+        <!-- Pay bill card -->
         <div
-          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+          id="pay-bill-card"
+          class="group text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img src="./assets/purse1.png" alt="pay bill" class="mx-auto pb-2" />
-          <p class="outfit-font text-[14px] text-[#080808]/70">Pay Bill</p>
+          <p
+            class="outfit-font text-[14px] text-[#080808]/70 group-hover:text-[#0874F2]"
+          >
+            Pay Bill
+          </p>
         </div>
+        <!-- Transactions card -->
         <div
-          class="text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px]"
+          id="transaction-card"
+          class="group text-center py-[20px] px-[26px] border-1 border-[#080808]/10 rounded-[12px] hover:border-[#0874F2] hover:bg-[#0874F2]/5 hover:duration-300 cursor-pointer"
         >
           <img
             src="./assets/transaction1.png"
             alt="transaction"
             class="mx-auto pb-2"
           />
-          <p class="outfit-font text-[14px] text-[#080808]/70">Transactions</p>
+          <p
+            class="outfit-font text-[14px] text-[#080808]/70 group-hover:text-[#0874F2]"
+          >
+            Transactions
+          </p>
         </div>
       </div>
     </section>
-    <!-- Bottom Section -->
-    <section class="max-w-lg mx-auto">
+    <!-- Add Money Section -->
+    <section id="add-money-section" class="max-w-lg mx-auto">
       <p
         class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
       >
@@ -123,14 +160,15 @@
             Select A Bank
           </p>
           <select
+            id="bank"
             class="select rounded-[32px] bg-[#F4F5F7] text-[#080808] w-full"
           >
             <option disabled selected class="text-[#080808]">
               Select Bank
             </option>
-            <option>Crimson</option>
-            <option>Amber</option>
-            <option>Velvet</option>
+            <option>ANZ Bank</option>
+            <option>Commonwealth Bank</option>
+            <option>NAB</option>
           </select>
         </div>
         <div class="mt-4">
@@ -138,7 +176,7 @@
             Bank Account Number
           </p>
           <input
-            id="pin-number"
+            id="account-number"
             type="text"
             placeholder="Enter 11 digit account number"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
@@ -149,7 +187,7 @@
             Amount to Add
           </p>
           <input
-            id="pin-number"
+            id="add-amount"
             type="text"
             placeholder="Add Amount to withdraw"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
@@ -160,7 +198,7 @@
             Pin Number
           </p>
           <input
-            id="pin-number"
+            id="add-pin"
             type="text"
             placeholder="Enter 4 digit pin number"
             class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
@@ -168,12 +206,347 @@
         </div>
         <button
           id="addMoneyBtn"
-          class="btn bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer"
+          class="py-[10px] bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer"
           type="button"
         >
           Add Money
         </button>
       </div>
     </section>
+    <!-- Cashout Section -->
+    <section
+      id="cashout-section"
+      class="max-w-lg mx-auto"
+      style="display: none"
+    >
+      <p
+        class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+      >
+        Cash Out
+      </p>
+      <div class="bg-white p-6 rounded-[24px] mx-6">
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Agent Number
+          </p>
+          <input
+            id="cashout-agent-number"
+            type="text"
+            placeholder="Enter 11 digit account number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Amount
+          </p>
+          <input
+            id="cashout-amount"
+            type="text"
+            placeholder="Add Amount to withdraw"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Pin Number
+          </p>
+          <input
+            id="cashout-pin"
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <button
+          id="withdrawMoneyBtn"
+          class="bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer py-[10px]"
+          type="button"
+        >
+          Withdraw Money
+        </button>
+      </div>
+    </section>
+    <!-- Transfer Money Section -->
+    <section
+      id="transfer-money-section"
+      class="max-w-lg mx-auto"
+      style="display: none"
+    >
+      <p
+        class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+      >
+        Transfer Money
+      </p>
+      <div class="bg-white p-6 rounded-[24px] mx-6">
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            User Account Number
+          </p>
+          <input
+            id="transfer-account-number"
+            type="text"
+            placeholder="Enter 11 digit account number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Amount
+          </p>
+          <input
+            id="transfer-amount"
+            type="text"
+            placeholder="Enter amount to transfer"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Pin Number
+          </p>
+          <input
+            id="transfer-pin"
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <button
+          id="sendMoneyBtn"
+          class="bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer py-[10px]"
+          type="button"
+        >
+          Send Now
+        </button>
+      </div>
+    </section>
+    <!-- Get Bonus Section -->
+    <section
+      id="get-bonus-section"
+      class="max-w-lg mx-auto"
+      style="display: none"
+    >
+      <p
+        class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+      >
+        Get Bonus
+      </p>
+      <div class="bg-white p-6 rounded-[24px] mx-6">
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Enter Bonus Coupon
+          </p>
+          <input
+            id="bonus-coupon"
+            type="text"
+            placeholder="Enter your coupon"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <button
+          id="getBonusBtn"
+          class="bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer py-[10px]"
+          type="button"
+        >
+          Get Bonus
+        </button>
+      </div>
+    </section>
+    <!-- Pay Bill Section -->
+    <section
+      id="pay-bill-section"
+      class="max-w-lg mx-auto"
+      style="display: none"
+    >
+      <p
+        class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+      >
+        Pay Bill
+      </p>
+      <div class="bg-white p-6 rounded-[24px] mx-6">
+        <div>
+          <p
+            class="outfit-font font-medium text-[16px] text-[#080808]/70 mb-[12px]"
+          >
+            Select To Pay
+          </p>
+          <select
+            id="bank"
+            class="select rounded-[32px] bg-[#F4F5F7] text-[#080808] w-full"
+          >
+            <option disabled selected class="text-[#080808]">
+              Select Bank
+            </option>
+            <option>ANZ Bank</option>
+            <option>Commonwealth Bank</option>
+            <option>NAB</option>
+          </select>
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Biller Account Number
+          </p>
+          <input
+            id="pay-bill-account"
+            type="text"
+            placeholder="Enter account number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Amount to Pay
+          </p>
+          <input
+            id="pay-bill-amount"
+            type="text"
+            placeholder="Add Amount to pay"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <div class="mt-4">
+          <p class="outfit-font font-medium text-[16px] text-[#080808]/70">
+            Pin Number
+          </p>
+          <input
+            id="pay-bill-pin"
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input bg-[#F4F5F7] rounded-[32px] outfit-font font-light text-[16px] w-full mt-2 text-[#080808]"
+          />
+        </div>
+        <button
+          id="payNowBtn"
+          class="bg-[#0874F2] w-full rounded-[32px] mt-4 outfit-font font-semibold text-white text-[20px] cursor-pointer py-[10px]"
+          type="button"
+        >
+          Pay Now
+        </button>
+      </div>
+    </section>
+    <!-- Transactions Section -->
+    <section
+      id="transaction-section"
+      class="max-w-lg mx-auto"
+      style="display: none"
+    >
+      <div class="flex justify-between items-center">
+        <p
+          class="outfit-font font-semibold text-[18px] text-[#080808]/90 mt-8 mb-4 mx-6"
+        >
+          Transaction History
+        </p>
+        <button
+          class="mt-8 mb-4 mx-6 outfit-font text-[14px] text-[#080808]/50 cursor-pointer"
+        >
+          View All
+        </button>
+      </div>
+      <!-- Transaction history cards -->
+      <div class="cards flex flex-col gap-4 mb-8">
+        <div
+          class="card1 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Electricity Bill
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+        </div>
+        <div
+          class="card2 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Bank Deposit
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+        </div>
+        <div
+          class="card3 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Mobile Recharge
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+        </div>
+        <div
+          class="card4 bg-white p-6 rounded-[24px] mx-6 border-1 border-[#080808]/10 flex flex-row justify-between items-center"
+        >
+          <div class="flex flex-row justify-between items-center gap-3">
+            <div class="relative h-[45.5px] w-[45.5px]">
+              <div class="bg-[#080808]/5 w-full h-full rounded-full"></div>
+              <img
+                src="./assets/wallet1.png"
+                alt="wallet"
+                class="absolute inset-0 m-auto"
+              />
+            </div>
+            <div>
+              <p
+                class="outfit-font font-semibold text-[16px] text-[#080808]/70"
+              >
+                Gas Bill
+              </p>
+              <p class="outfit-font text-[16px] text-[#080808]/70">
+                Today 01:44 AM
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical text-[#080808]/70"></i>
+        </div>
+      </div>
+    </section>
+    <script src="./home.js"></script>
   </body>
 </html>
