@@ -80,7 +80,7 @@ document
       alert("Please provide a valid PIN.");
       return;
     }
-    if (isNaN(addAmount)) {
+    if (isNaN(addAmount) || addAmount<=0) {
       alert("Please provide a valid Amount to Add.");
       return;
     }
@@ -116,6 +116,10 @@ document
     const cashoutPinInt = getInputValueNumber("cashout-pin");
     const bankBalance = parseInt(getInnerText("bank-balance"));
 
+    if (cashoutAmount<=0 || cashoutAmount>bankBalance) {
+      alert("Please provide a valid Amount to Add.");
+      return;
+    }
     const totalBankBalance = bankBalance - cashoutAmount;
     setInnerText("bank-balance", totalBankBalance);
 
@@ -162,6 +166,12 @@ document.getElementById("transaction-card").addEventListener("click", function (
 // display "latest-payment-section"
 document.getElementById("logo").addEventListener("click", function () {
   handleToggle("latest-payment-section", "form");
+  // Remove hover effect from all the cards
+  const formButtons = document.getElementsByClassName("form-btn");
+  for (const formButton of formButtons) {
+    formButton.classList.remove("border-[#0874F2]", "bg-[#0874F2]/5");
+    formButton.classList.add("border-[#080808]/10");
+  }
 });
 
 // display "add-money-section"
